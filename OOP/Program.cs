@@ -42,7 +42,7 @@ namespace OOP
                 _heartPos=new List<int> ();
                 _maxEnemyNumber = enemyNumber;
                 _maxHeartNumber = heartNumber;
-                _hero=new Hero(200,0);
+                _hero=new Hero(100,0);
                 _GameMap=DrawGameAndCharacters();
 
             }
@@ -137,6 +137,7 @@ namespace OOP
             {
                 while(_hero.Position!=_mapLenght-2 && _hero.GetHp()>0)
                 {
+                    Console.Clear();
                     Console.WriteLine(_GameMap);
                     if(_enemies.Count() > 0 && _enemies[0].GetHp()<1)
                         {
