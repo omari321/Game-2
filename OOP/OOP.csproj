@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Asciis\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Asciis\castle.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

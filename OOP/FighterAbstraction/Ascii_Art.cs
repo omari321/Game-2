@@ -19,7 +19,7 @@ namespace OOP.Fighters
             var curFileHeight = 0;
             this.symbol = symbol;
             this.lines = new List<string>();
-            using (var file =new StreamReader(Path.Join(Directory.GetCurrentDirectory().ToString(), FileLoc)))
+            using (var file =new StreamReader(Path.Join(Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory().ToString(), @"..\..\..\", "Asciis\\")), FileLoc)))
             {
                 while (file.Peek() >= 0)
                 {
