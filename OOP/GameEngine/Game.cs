@@ -38,7 +38,9 @@ namespace OOP.GameEngine
             else
             {
                 _mapLenght = lenght;
-            }
+            } 
+            _GameloseAscii = new Ascii_Art(loseAscii);
+            Ascii_Art.maxheight = 0;
             _enemies = new List<Fighter>();
             _GameWinAscii=new List<Ascii_Art>();
             _heartPos = new List<int>();
@@ -50,7 +52,7 @@ namespace OOP.GameEngine
             _HeartAscii=new Ascii_Art(heartFile,Game._HealthSymbol.ToString());
             _CastleAscii = new Ascii_Art(castleFIle,Game._CastleSymbol.ToString());
             winFiles.ForEach(str => _GameWinAscii.Add(new Ascii_Art(str)));
-            _GameloseAscii = new Ascii_Art(loseAscii);
+           
             _hero = new Hero(_HeroHP);
             _GameMap = DrawGameAndCharacters();
             

@@ -15,10 +15,10 @@ namespace OOP
     {
         static void Main(string[] args)
         {
+            Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
             List<string> winFiles=new List<string>() {"win1.txt", "win2.txt", "win3.txt" };
             var Game = new Game(12,4,1,"Hero_1.txt","spear_man.txt","ranger.txt","life.txt","castle.txt",winFiles,"lose.txt");
             Game.StartGame();
-            
         }    
     }
 }
