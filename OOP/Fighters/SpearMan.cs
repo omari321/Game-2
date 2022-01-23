@@ -9,10 +9,17 @@ namespace OOP.Fighters
 {
     public class SpearMan : Fighter
     {
-        public const String symbol = "S";
-        public SpearMan(int hp, int position) : base(hp, "S", position)
+        public static Ascii_Art FighterAsciiInfo { get; set; }
+
+       
+        public SpearMan(int hp, int position) : base(hp, position)
         {
 
+        }
+        public static void SetFighterAscii(string fileLoc, string symbol)
+        {
+            System.Console.WriteLine(symbol);
+            FighterAsciiInfo = new Ascii_Art(fileLoc, symbol);
         }
 
         public override int GetRandomDamage()
@@ -23,6 +30,11 @@ namespace OOP.Fighters
         public override int GetRange()
         {
             return 1;
+        }
+
+        public override Ascii_Art getFighterAscii()
+        {
+            return FighterAsciiInfo;
         }
     }
 

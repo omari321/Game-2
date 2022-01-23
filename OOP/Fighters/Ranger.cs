@@ -9,8 +9,10 @@ namespace OOP.Fighters
 {
     public class Ranger :Fighter
     {
-        public const string Symbol = "R";
-        public Ranger(int hp, int position) : base(hp, "R", position)
+        public static Ascii_Art FighterAsciiInfo { get; set; }
+
+        
+        public Ranger(int hp, int position) : base(hp, position)
         {
 
         }
@@ -23,6 +25,16 @@ namespace OOP.Fighters
         public override int GetRange()
         {
             return new Random().Next(1, 4);
+        }  
+        public static void SetFighterAscii(string fileLoc, string symbol)
+        {
+            System.Console.WriteLine(symbol);
+            FighterAsciiInfo = new Ascii_Art(fileLoc, symbol);
+        }
+
+        public override Ascii_Art getFighterAscii()
+        {
+            return FighterAsciiInfo;
         }
     }
 
